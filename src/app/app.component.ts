@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   levelNum:number;
-  levels:Array<Object> = [
+  levels = [
       {num: 0, name: "AA"},
       {num: 1, name: "BB"}
   ];
