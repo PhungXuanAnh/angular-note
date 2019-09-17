@@ -1,24 +1,24 @@
-    <h1>Select tag sample with two-way binding</h1>
-    <hr>
-    
-    <h3>Selecting Number</h3>
-    <select type="number" [(ngModel)]="levelNum" (ngModelChange)="toNumber()">
-      <option *ngFor="let level of levels" [ngValue]="level.num">{{level.name}}</option>
-    </select>
-    {{levelNum}}
+<h1>Select tag sample with two-way binding</h1>
+<hr>
 
-    <hr>
+<h3>Selecting Number</h3>
+<select type="number" [(ngModel)]="levelNum" (ngModelChange)="toNumber()">
+  <option *ngFor="let level of levels" [ngValue]="level.num">{{level.name}}</option>
+</select>
+{{levelNum}}
 
-    <h3>Selecting object</h3>
-    <select type="number" [(ngModel)]="selectedLevel">
-      <option *ngFor="let level of levels" [ngValue]="level">{{level.name}}</option>
-    </select>
-    {{selectedLevel | json}}
+<hr>
 
-    <hr>
+<h3>Selecting object</h3>
+<select type="number" [(ngModel)]="selectedLevel">
+  <option *ngFor="let level of levels" [ngValue]="level">{{level.name}}</option>
+</select>
+{{selectedLevel | json}}
 
-    <h3>Selecting object with custom compare</h3>
-    <select type="number" [(ngModel)]="selectedLevelCustomCompare" [compareWith]="compareFn">
-      <option *ngFor="let level of levels" [ngValue]="level">{{level.name}}</option>
-    </select>
-    {{selectedLevelCustomCompare | json}}
+<hr>
+
+<h3>Selecting object with custom compare</h3>
+<select type="number" [(ngModel)]="selectedLevelCustomCompare" [compareWith]="compareFn">
+  <option *ngFor="let level of levels" [ngValue]="level">{{level.name}}</option>
+</select>
+{{selectedLevelCustomCompare | json}}
